@@ -3,31 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cook Medical Workforce Analysis — Bloomington, IN</title>
+  <title>Cook Medical Workforce Analysis — Bloomington, IN (v0.2)</title>
   <style>
     :root{
-      --bg:#0b0f14;
-      --card:#101720;
-      --muted:#9fb0c3;
-      --text:#e9f0f8;
-      --line:#233243;
-      --accent:#7cc4ff;
-      --soft:#0f1722;
+      --bg:#ffffff;
+      --panel:#f7f9fc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --accent:#2563eb;
+      --accent2:#0ea5e9;
+      --warn:#b45309;
+      --good:#15803d;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#070a0f 0%, #0b0f14 40%, #0b0f14 100%); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#ffffff 0%, #fbfcff 50%, #ffffff 100%);
+      color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
-    header{padding:34px 0 18px;border-bottom:1px solid var(--line); background:rgba(11,15,20,.7); backdrop-filter: blur(6px); position:sticky; top:0;}
-    h1{margin:0 0 6px;font-size:26px; letter-spacing:.2px}
-    .sub{color:var(--muted); line-height:1.45; font-size:13.5px}
+    header{
+      padding:28px 0 18px;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.92);
+      position:sticky; top:0; backdrop-filter: blur(6px);
+    }
+    h1{margin:0 0 6px;font-size:26px;letter-spacing:.2px}
+    .sub{color:var(--muted); line-height:1.5; font-size:13.5px}
     .tagrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
-    .tag{border:1px solid var(--line); color:var(--muted); background:rgba(16,23,32,.7); padding:6px 10px; border-radius:999px; font-size:12px}
+    .tag{
+      border:1px solid var(--line);
+      color:var(--muted);
+      background:var(--panel);
+      padding:6px 10px; border-radius:999px; font-size:12px;
+    }
     main{padding:22px 0 44px}
     .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:14px}
-    .card{background:linear-gradient(180deg, rgba(16,23,32,.95) 0%, rgba(16,23,32,.82) 100%);
-      border:1px solid var(--line); border-radius:16px; padding:16px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      box-shadow: 0 1px 0 rgba(15,23,42,.03);
+    }
     .kpi{grid-column:span 3}
     .kpi h3{margin:0 0 8px; font-size:12px; color:var(--muted); font-weight:650; letter-spacing:.2px}
     .kpi .val{font-size:22px; font-weight:800}
@@ -39,14 +62,48 @@
     ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.55; font-size:13.5px}
     li{margin:6px 0}
     .hr{height:1px;background:var(--line); margin:10px 0 14px}
-    .callout{border-left:3px solid var(--accent); padding:10px 12px; background:rgba(15,23,34,.7); border-radius:12px}
+    .callout{
+      border-left:4px solid var(--accent);
+      padding:10px 12px;
+      background: #f3f7ff;
+      border-radius:12px;
+      color:var(--text);
+    }
+    .callout strong{color:var(--text)}
     .cols{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:10px}
-    .mini{background:rgba(15,23,34,.65); border:1px solid var(--line); border-radius:14px; padding:14px}
+    .mini{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+    }
     .mini h3{margin:0 0 8px; font-size:13px; color:var(--text)}
-    .embed{border:1px dashed #3a5168; background:rgba(15,23,34,.35); border-radius:14px; padding:14px}
-    footer{padding:22px 0 34px;border-top:1px solid var(--line); background:rgba(11,15,20,.65)}
-    .src ol{margin:10px 0 0 18px; color:var(--muted); line-height:1.6; font-size:13px}
-    code{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); padding:2px 6px; border-radius:8px}
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#ffffff;
+      color:var(--muted);
+      margin-right:8px;
+      margin-top:8px;
+    }
+    .badge.good{border-color:#bbf7d0; background:#f0fdf4; color:var(--good)}
+    .badge.warn{border-color:#fed7aa; background:#fff7ed; color:var(--warn)}
+    table{width:100%; border-collapse:collapse; font-size:13px}
+    th, td{padding:10px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+    th{color:var(--muted); text-align:left; font-weight:700; background:#fbfdff}
+    .small{font-size:12px; color:var(--muted)}
+    .right{text-align:right}
+    .muted{color:var(--muted)}
+    footer{
+      padding:22px 0 34px;
+      border-top:1px solid var(--line);
+      background:#ffffff;
+    }
+    .src ol{margin:10px 0 0 18px; color:var(--muted); line-height:1.65; font-size:13px}
+    code{background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.15); padding:2px 6px; border-radius:8px}
     @media (max-width:980px){
       .kpi{grid-column:span 6}
       .half{grid-column:span 12}
@@ -58,16 +115,16 @@
 <body>
 <header>
   <div class="wrap">
-    <h1>Bloomington, IN — Labor Market Conditions (Cook Medical Workforce Analysis)</h1>
+    <h1>Bloomington, IN — Labor Market Diagnosis (Cook Medical Workforce Analysis)</h1>
     <div class="sub">
-      <strong>Objective:</strong> diagnose labor conditions affecting Cook Medical’s recruitment and retention of minimum-skills / hourly manufacturing talent in the Bloomington area, using public data.
+      <strong>Objective:</strong> diagnose labor conditions affecting Cook Medical’s recruitment and retention of minimum-skills / hourly manufacturing talent using public data.
       <br/>
-      <strong>Labor market definition:</strong> Bloomington, IN Metropolitan Statistical Area (Monroe + Owen Counties).
+      <strong>Labor market definition:</strong> Bloomington, IN MSA (Monroe + Owen Counties).
     </div>
     <div class="tagrow">
-      <span class="tag">Deliverable 1 — Web Brief (v0.1)</span>
-      <span class="tag">Market + PESTLE diagnosis</span>
-      <span class="tag">Dashboard-ready metrics</span>
+      <span class="tag">Deliverable 1 — Web Brief</span>
+      <span class="tag">Version 0.2 (data-backed)</span>
+      <span class="tag">OEWS + Unemployment trend + Postings snapshot</span>
       <span class="tag">Public sources only</span>
     </div>
   </div>
@@ -76,158 +133,332 @@
 <main>
   <div class="wrap grid">
 
-    <!-- KPI CARDS -->
+    <!-- KPI CARDS (pulled from your datasets) -->
     <div class="card kpi">
-      <h3>Unemployment rate (MSA)</h3>
-      <div class="val">2.4%</div>
-      <div class="note">Tight market → higher time-to-fill + retention pressure (Dec 2025, preliminary).</div>
+      <h3>Unemployment (avg, last 12 mo)</h3>
+      <div class="val">3.56%</div>
+      <div class="note">Range: 2.5%–4.4% (Oct 2024–Sep 2025).</div>
     </div>
 
     <div class="card kpi">
-      <h3>Production occupations share</h3>
-      <div class="val">9.6%</div>
-      <div class="note">Meaningful hourly production labor base locally (May 2024 OEWS).</div>
+      <h3>Production workforce depth</h3>
+      <div class="val">7,020</div>
+      <div class="note">Production occupations employment (May 2024 OEWS).</div>
     </div>
 
     <div class="card kpi">
-      <h3>All-occupation mean wage</h3>
-      <div class="val">$28.38/hr</div>
-      <div class="note">Context baseline for local wage environment (May 2024 OEWS).</div>
+      <h3>Assembler concentration (LQ)</h3>
+      <div class="val">3.97</div>
+      <div class="note">~4× national concentration → cluster + competition.</div>
     </div>
 
     <div class="card kpi">
-      <h3>Monroe County median rent</h3>
-      <div class="val">$1,193</div>
-      <div class="note">Housing cost friction → attraction/retention risk for hourly workers.</div>
+      <h3>Core hourly wage band</h3>
+      <div class="val">$17–$24/hr</div>
+      <div class="note">P25–P75 across assembler + forklift benchmarks.</div>
     </div>
 
     <!-- EXEC SUMMARY -->
     <div class="card full">
-      <h2>Executive Summary (What this market is doing to Cook)</h2>
+      <h2>Executive Summary (Bloomington: What the labor market is doing to Cook)</h2>
       <div class="callout">
         <p>
-          Bloomington is a <strong>tight-labor</strong>, <strong>institution-heavy</strong> market (IU + healthcare + life sciences) where hourly manufacturing roles face
-          <strong>competition pressure</strong> and <strong>housing affordability friction</strong>. Cook’s advantage is brand presence and an established ecosystem; the risk is
-          <strong>vacancy cost</strong> and <strong>churn</strong> in a low-unemployment environment.
+          Bloomington is a <strong>tight labor market</strong> with a <strong>specialized manufacturing cluster</strong>.
+          The labor pool exists, but “available” labor is limited because unemployment averages ~3.6%.
+          The standout signal is assembler concentration (LQ 3.97): Cook is operating in a market that is
+          <strong>skills-aligned</strong> but <strong>highly contested</strong>.
         </p>
       </div>
+
       <div class="hr"></div>
+      <span class="badge warn"><strong>Risk:</strong> hiring friction (low unemployment)</span>
+      <span class="badge warn"><strong>Risk:</strong> wage pressure in hourly production</span>
+      <span class="badge warn"><strong>Risk:</strong> forklift & “operators” are scarcity pockets</span>
+      <span class="badge good"><strong>Opportunity:</strong> internal ladders (assembler → inspection)</span>
+
       <ul>
-        <li><strong>Primary recruiting constraint:</strong> labor tightness (low unemployment) increases time-to-fill and raises the value of retention.</li>
-        <li><strong>Primary retention constraint:</strong> housing + wage competition—especially for minimum-skills workers.</li>
-        <li><strong>Where Cook can win:</strong> schedule stability, reliable hours, internal mobility ladders, and faster hiring cycle time.</li>
+        <li><strong>Primary constraint:</strong> labor tightness increases time-to-fill and raises the ROI of retention.</li>
+        <li><strong>Primary battleground:</strong> $18–$22/hour roles (assemblers, movers, warehouse/forklift).</li>
+        <li><strong>Potential bottleneck:</strong> maintenance (industrial machinery mechanics) — small base, high wages.</li>
       </ul>
     </div>
 
-    <!-- MARKET DIAGNOSIS -->
-    <div class="card half">
-      <h2>Market Diagnosis (Labor Supply & Demand)</h2>
-      <ul>
-        <li><strong>Labor supply:</strong> Monroe County has high educational attainment, creating strong potential for upskilling pipelines (HS+ and BA+ are both high).</li>
-        <li><strong>Demand intensity:</strong> large institutional employers and life-science manufacturers compete for reliable attendance and shift-fit talent.</li>
-        <li><strong>Hiring reality:</strong> in a 2–4% unemployment environment, “posting a job” isn’t a strategy—speed, offer quality, and onboarding experience matter.</li>
-      </ul>
-      <div class="hr"></div>
-      <p>
-        <strong>Working assumption (until Cook confirms):</strong> we treat Cook’s target as a “minimum-skills hourly manufacturing basket” (assemblers, packers, machine operators, material movers, forklift, entry QA/inspection).
-        Once Cook shares exact titles, we will map them to this basket and tighten the benchmarks.
+    <!-- STRUCTURAL DATA: OEWS ROLE BASKET -->
+    <div class="card full">
+      <h2>Role-Basket Benchmarks (Public wages & depth — Bloomington MSA, May 2024 OEWS)</h2>
+      <p class="small">
+        Interpreting LQ: &gt;1 means the occupation is more concentrated locally than the national average.
       </p>
+
+      <div class="hr"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Role (SOC)</th>
+            <th class="right">Employment</th>
+            <th class="right">Hourly Mean</th>
+            <th class="right">Hourly Median</th>
+            <th class="right">P25</th>
+            <th class="right">P75</th>
+            <th class="right">LQ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Production Occupations</strong> (51-0000)</td>
+            <td class="right">7,020</td>
+            <td class="right">$23.00</td>
+            <td class="right">$21.42</td>
+            <td class="right">$17.69</td>
+            <td class="right">$24.70</td>
+            <td class="right">1.69</td>
+          </tr>
+          <tr>
+            <td><strong>Misc. Assemblers &amp; Fabricators</strong> (51-2090)</td>
+            <td class="right">2,740</td>
+            <td class="right">$18.99</td>
+            <td class="right">$17.69</td>
+            <td class="right">$17.65</td>
+            <td class="right">$21.97</td>
+            <td class="right"><strong>3.97</strong></td>
+          </tr>
+          <tr>
+            <td>Inspectors / Testers / Sorters (51-9061)</td>
+            <td class="right">610</td>
+            <td class="right">$27.74</td>
+            <td class="right">$28.95</td>
+            <td class="right">$23.05</td>
+            <td class="right">$30.82</td>
+            <td class="right">2.16</td>
+          </tr>
+          <tr>
+            <td>Laborers &amp; Material Movers, Hand (53-7062)</td>
+            <td class="right">950</td>
+            <td class="right">$18.93</td>
+            <td class="right">$18.26</td>
+            <td class="right">$16.74</td>
+            <td class="right">$21.80</td>
+            <td class="right">0.67</td>
+          </tr>
+          <tr>
+            <td>Stockers &amp; Order Fillers (53-7065)</td>
+            <td class="right">1,070</td>
+            <td class="right">$16.91</td>
+            <td class="right">$16.92</td>
+            <td class="right">$15.00</td>
+            <td class="right">$18.33</td>
+            <td class="right">0.81</td>
+          </tr>
+          <tr>
+            <td><strong>Forklift</strong> (Industrial Truck &amp; Tractor Operators, 53-7051)</td>
+            <td class="right">230</td>
+            <td class="right">$22.00</td>
+            <td class="right">$22.29</td>
+            <td class="right">$19.97</td>
+            <td class="right">$23.99</td>
+            <td class="right">0.61</td>
+          </tr>
+          <tr>
+            <td><strong>Industrial Maintenance</strong> (Industrial Machinery Mechanics, 49-9041)</td>
+            <td class="right">180</td>
+            <td class="right">$32.44</td>
+            <td class="right">$31.20</td>
+            <td class="right">$28.58</td>
+            <td class="right">$37.95</td>
+            <td class="right">0.92</td>
+          </tr>
+          <tr>
+            <td>Machinists (51-4041)</td>
+            <td class="right">360</td>
+            <td class="right">$23.53</td>
+            <td class="right">$21.42</td>
+            <td class="right">$21.38</td>
+            <td class="right">$23.63</td>
+            <td class="right">2.56</td>
+          </tr>
+          <tr>
+            <td>First-Line Production Supervisors (51-1011)</td>
+            <td class="right">530</td>
+            <td class="right">$38.02</td>
+            <td class="right">$38.23</td>
+            <td class="right">$28.12</td>
+            <td class="right">$47.62</td>
+            <td class="right">1.64</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="hr"></div>
+      <ul>
+        <li><strong>Assembler market signal:</strong> very high concentration (LQ 3.97) → Cook is in a “manufacturing skills” cluster, but competition is structurally high.</li>
+        <li><strong>Wage signal:</strong> assembler median ~$17.69/hr; forklift median ~$22.29/hr → hourly offers must clear these baselines or win via schedule/benefits.</li>
+        <li><strong>Bottleneck signal:</strong> maintenance is high-wage and small in absolute headcount (180) → higher risk of vacancy impact, overtime, and downtime.</li>
+      </ul>
     </div>
 
-    <div class="card half">
-      <h2>Competitive Employer Landscape (Public view)</h2>
-      <p>Major employers in the Bloomington area include (examples):</p>
-      <ul>
-        <li>Indiana University – Bloomington (7,000)</li>
-        <li>Cook Group (3,300)</li>
-        <li>IU Health Bloomington (2,246)</li>
-        <li>Baxter Healthcare Pharmaceuticals (1,100)</li>
-        <li>General Electric (650) and others</li>
-      </ul>
+    <!-- ACTIVE DEMAND: JOB POSTINGS -->
+    <div class="card full">
+      <h2>Active Hiring Pressure (20-mile radius from Bloomington — postings snapshot)</h2>
+      <p class="small">
+        Postings are not hires, but they are a live indicator of demand intensity and competitive hiring activity.
+        Snapshot collected by the project team (Feb 2026).
+      </p>
+
       <div class="hr"></div>
-      <p>
-        <strong>Why this matters for hourly labor:</strong> even when employers aren’t “manufacturing,” they compete for the same stability traits—reliable attendance, predictable schedules, and benefits.
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th class="right">Radius</th>
+            <th class="right">Posting Count</th>
+            <th>Typical Pay Range Observed</th>
+            <th>Repeated Employers (examples)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>production worker</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">51</td>
+            <td>$20–$28</td>
+            <td class="muted">Amcor, Kelly Services, Phoenix Closures, FastSigns, …</td>
+          </tr>
+          <tr>
+            <td><strong>warehouse associate</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">47</td>
+            <td>$17–$22</td>
+            <td class="muted">humano, CJ Logistics, Sysco, Amazon, Walmart, …</td>
+          </tr>
+          <tr>
+            <td><strong>forklift</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">34</td>
+            <td>$18–$22</td>
+            <td class="muted">Lineage Logistics, Staffmark, DHL, Costco, …</td>
+          </tr>
+          <tr>
+            <td><strong>assembler</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">27</td>
+            <td>$16–$22</td>
+            <td class="muted">Express Employment Professionals, Qual…</td>
+          </tr>
+          <tr>
+            <td><strong>machine operator</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">14</td>
+            <td>$20–$22</td>
+            <td class="muted">Printpack, Carlisle Brake &amp; Friction, Loram, …</td>
+          </tr>
+          <tr>
+            <td><strong>quality inspector</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">11</td>
+            <td>$20–$32</td>
+            <td class="muted">Aerotek, Pro QC International, Dalsin Industries</td>
+          </tr>
+          <tr>
+            <td><strong>packager</strong></td>
+            <td class="right">20 mi</td>
+            <td class="right">3</td>
+            <td>$17–$24</td>
+            <td class="muted">Walmart, Sam’s Club</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="hr"></div>
+      <h2>Demand Pressure Flags (diagnostic takeaways)</h2>
+      <ul>
+        <li><strong>Warehousing + forklift demand is heavy</strong> (47 + 34 postings). Even if Cook is “manufacturing,” it competes with logistics employers for the same attendance/stability talent.</li>
+        <li><strong>“Production worker” postings (51)</strong> suggest broad competition for general hourly production labor. In a ~3.6% unemployment market, this reinforces recruiting friction.</li>
+        <li><strong>Quality inspector pay ranges ($20–$32)</strong> overlap with OEWS inspection medians; pay dispersion implies competition on experience level and certifications.</li>
+      </ul>
+
+      <p class="small">
+        Note: keyword posting counts are an indicator. In v0.3 we’ll normalize counts into a “posting intensity” index and connect them to the closest OEWS SOC groups.
       </p>
     </div>
 
     <!-- PESTLE -->
     <div class="card full">
-      <h2>PESTLE Diagnosis (Non-Market Conditions)</h2>
+      <h2>PESTLE Diagnosis (Non-Market Conditions — Bloomington)</h2>
       <div class="cols">
 
         <div class="mini">
           <h3>Political / Legal</h3>
           <ul>
-            <li><strong>Right-to-Work</strong> environment shapes labor relations expectations.</li>
-            <li>Watch: state/local incentives that accelerate competitor expansions (labor demand shocks).</li>
+            <li>Indiana’s labor relations baseline (Right-to-Work) shapes expectations and bargaining environment.</li>
+            <li>Watch: incentives and development policies that accelerate competitor expansions (labor demand shocks).</li>
           </ul>
         </div>
 
         <div class="mini">
           <h3>Economic</h3>
           <ul>
-            <li><strong>Low unemployment</strong> increases vacancy cost and makes retention ROI unusually high.</li>
-            <li><strong>Housing costs</strong> act as a “hidden wage”: if rent rises, hourly wage pressure follows.</li>
+            <li><strong>Unemployment averaging ~3.56%</strong> indicates structurally tight labor conditions.</li>
+            <li>Watch: wage drift in $18–$22/hour roles and overtime dependency (early sign of shortage).</li>
           </ul>
         </div>
 
         <div class="mini">
           <h3>Social / Demographic</h3>
           <ul>
-            <li>Student + institutional population can create <strong>seasonality</strong> in entry-level labor.</li>
-            <li>Watch: workforce participation rate and “stable workforce” availability (non-student households).</li>
+            <li>Institution-heavy market (IU + healthcare) shapes benefit expectations and job switching patterns.</li>
+            <li>Watch: labor force participation and “stable workforce” supply beyond student seasonality.</li>
           </ul>
         </div>
 
         <div class="mini">
           <h3>Technological</h3>
           <ul>
-            <li>Opportunity: partner with local training providers for entry-level certifications and fast-track onboarding.</li>
-            <li>Watch: competitor investments in automation that change wage expectations for operators/techs.</li>
+            <li>Opportunity: internal ladders (assembler → inspector/QA) and rapid training for entry roles.</li>
+            <li>Watch: competitor automation investments that shift demand toward tech/maintenance.</li>
           </ul>
         </div>
 
         <div class="mini">
           <h3>Environmental</h3>
           <ul>
-            <li>Commute disruption risk (seasonal weather) can affect attendance and overtime reliability.</li>
-            <li>Watch: labor shed resilience (how far workers can reliably commute).</li>
+            <li>Commute reliability affects hourly attendance; labor shed resilience matters for shift staffing.</li>
+            <li>Watch: winter disruption and commuting radius constraints.</li>
           </ul>
         </div>
 
         <div class="mini">
           <h3>Institutional / Ecosystem</h3>
           <ul>
-            <li>Large anchors (IU + healthcare) shape benefit expectations and talent movement.</li>
-            <li>Watch: life sciences growth that tightens the hourly market and increases poaching.</li>
+            <li>Skills-aligned manufacturing cluster (high assembler/inspection concentration) supports hiring — but heightens competition.</li>
+            <li>Watch: large employers’ hiring waves (temp agencies and logistics employers are active competitors).</li>
           </ul>
         </div>
 
       </div>
     </div>
 
-    <!-- WHAT COOK SHOULD WATCH -->
+    <!-- RECOMMENDATIONS -->
     <div class="card full">
-      <h2>Bloomington Watchlist KPIs (What Cook should monitor monthly/quarterly)</h2>
+      <h2>Recruitment & Retention Implications (Bloomington — actionable)</h2>
       <ul>
-        <li><strong>Unemployment rate</strong> (MSA): early indicator of tightening/loosening labor.</li>
-        <li><strong>Local production/warehouse wage drift</strong> (P50 & P75 once role-level data is added): pay competitiveness + compression risk.</li>
-        <li><strong>Competitor job posting velocity</strong> (90-day rolling): hiring surges and poaching risk.</li>
-        <li><strong>Housing affordability trend</strong> (rent + home values): retention risk for hourly workers.</li>
-        <li><strong>Labor force participation</strong>: “true supply” beyond unemployment.</li>
+        <li><strong>Compete on speed:</strong> in a tight market, reduce time-to-offer; consider same-day conditional offers for entry roles.</li>
+        <li><strong>Win the $18–$22/hr band:</strong> align entry pay with assembler + forklift benchmarks; use shift premiums if 2nd/3rd shift is critical.</li>
+        <li><strong>Protect bottlenecks:</strong> treat maintenance as a critical risk role (small base, high wage). Consider retention bonuses, training reimbursement, and clear progression.</li>
+        <li><strong>Build ladders:</strong> formalize internal pathways (assembler → inspector/QA → lead/supervisor). The OEWS wage step-up supports the business case.</li>
+        <li><strong>Acknowledge logistics competition:</strong> warehouse/forklift postings are abundant; messaging should emphasize stability, mission, and growth rather than “factory job.”</li>
       </ul>
+
       <div class="hr"></div>
-      <p>
-        <strong>Shift note:</strong> Cook hasn’t confirmed 1st vs 2nd/3rd shift targeting yet. When confirmed, we’ll add a “shift differential pressure” section (night/weekend pay patterns + competitor schedules).
+      <p class="small">
+        <strong>Shift note:</strong> Cook has not confirmed 1st vs 2nd/3rd shift targeting. Once confirmed, we will add a “shift differential pressure” panel (night/weekend pay patterns + competitor schedule signals).
       </p>
     </div>
 
     <!-- POWERBI PLACEHOLDER -->
     <div class="card full">
       <h2>PowerBI Embed (Placeholder)</h2>
-      <div class="embed">
-        When the Bloomington dataset is finalized, embed your dashboard here via iframe:
-        <br/><br/>
+      <p class="small">Embed the site-filterable dashboard here once the Bloomington dataset is finalized.</p>
+      <div class="mini">
         <code>&lt;iframe title="Cook Workforce — Bloomington" width="100%" height="520" src="POWERBI_EMBED_URL" frameborder="0" allowFullScreen="true"&gt;&lt;/iframe&gt;</code>
       </div>
     </div>
@@ -237,38 +468,30 @@
 
 <footer>
   <div class="wrap src">
-    <h2>Sources (embedded for traceability)</h2>
-    <p>All metrics and claims in this page are derived from the public sources below.</p>
+    <h2>Sources & Traceability</h2>
+    <p class="small">
+      This page integrates (1) BLS unemployment time series, (2) BLS OEWS wages/employment, and (3) a team-collected postings snapshot.
+      Links below enable direct verification.
+    </p>
+
     <ol>
       <li>
-        BLS “Economy at a Glance” — Bloomington, IN MSA (unemployment rate table; data extracted Feb 19, 2026).
+        <strong>Unemployment time series (Bloomington MSA)</strong> — Bureau of Labor Statistics (LAUS / EAG).
         <br/><a href="https://www.bls.gov/eag/eag.in_bloomington_msa.htm" target="_blank" rel="noopener">https://www.bls.gov/eag/eag.in_bloomington_msa.htm</a>
       </li>
       <li>
-        BLS Midwest Information Office — Occupational Employment & Wages in Bloomington, IN (May 2024 OEWS; mean wage + production share + MSA definition).
+        <strong>Occupational wages & employment (May 2024 OEWS, Bloomington MSA)</strong> — Bureau of Labor Statistics.
         <br/><a href="https://www.bls.gov/regions/midwest/news-release/occupationalemploymentandwages_bloomingtonin.htm" target="_blank" rel="noopener">https://www.bls.gov/regions/midwest/news-release/occupationalemploymentandwages_bloomingtonin.htm</a>
       </li>
       <li>
-        U.S. Census QuickFacts — Monroe County, Indiana (education, labor force participation, housing costs).
-        <br/><a href="https://www.census.gov/quickfacts/fact/table/monroecountyindiana/PST045224" target="_blank" rel="noopener">https://www.census.gov/quickfacts/fact/table/monroecountyindiana/PST045224</a>
-      </li>
-      <li>
-        Greater Bloomington Chamber of Commerce — Major Employers list (competitive employer landscape + headcounts).
-        <br/><a href="https://web.chamberbloomington.org/business_center/major_employers.aspx" target="_blank" rel="noopener">https://web.chamberbloomington.org/business_center/major_employers.aspx</a>
-      </li>
-      <li>
-        Indiana Department of Labor — Right-to-Work overview (non-market/legal baseline).
-        <br/><a href="https://www.in.gov/dol/right-to-work/" target="_blank" rel="noopener">https://www.in.gov/dol/right-to-work/</a>
-      </li>
-      <li>
-        Bloomington Economic Development Corporation — Major Employers (additional competitive employer context).
-        <br/><a href="https://www.bloomingtonedc.com/data-center/major-employers" target="_blank" rel="noopener">https://www.bloomingtonedc.com/data-center/major-employers</a>
+        <strong>Job postings snapshot (20-mile radius from Bloomington)</strong> — collected by project team (Feb 2026) via major job boards (keyword search).
+        <br/><span class="small">Note: posting counts are a live-market indicator and may change daily. Snapshot is stored in the project workbook for auditability.</span>
       </li>
     </ol>
 
     <div class="hr"></div>
-    <p style="color:var(--muted); font-size:12.5px;">
-      Version 0.1 — Next iteration will add role-basket wages (assemblers, packers, inspectors, machine operators, material movers, forklift) and competitor job-posting pressure.
+    <p class="small">
+      Version 0.2 — Next iteration (v0.3) will add normalized “posting intensity” ratios by role family, housing affordability signals, and pipeline partners.
     </p>
   </div>
 </footer>
