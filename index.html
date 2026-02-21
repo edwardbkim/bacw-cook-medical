@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cook Medical Workforce Analysis: Bloomington, IN (v0.3)</title>
+  <title>Cook Medical Workforce Analysis: Bloomington, IN</title>
   <style>
     :root{
       --bg:#ffffff;
@@ -13,7 +13,6 @@
       --muted:#475569;
       --line:#e2e8f0;
       --accent:#2563eb;
-      --accent2:#0ea5e9;
       --warn:#b45309;
       --good:#15803d;
       --soft:#f3f7ff;
@@ -117,7 +116,7 @@
   <div class="wrap">
     <h1>Bloomington, IN: Labor Market Diagnosis (Cook Medical Workforce Analysis)</h1>
     <div class="sub">
-      <strong>Objective:</strong> provide actionable insight on labor availability, wage competitiveness, and workforce risks for minimum-skills / hourly manufacturing roles (public data only)
+      <strong>Objective:</strong> provide actionable insight on labor availability, wage competitiveness, and workforce risks for minimum-skills / hourly manufacturing roles (public data only).
       <br/>
       <strong>Labor market definition:</strong> Bloomington, IN MSA (Monroe + Owen Counties)
       <br/>
@@ -125,10 +124,10 @@
     </div>
     <div class="tagrow">
       <span class="tag">Prepared for Stephanie L.</span>
-      <span class="tag">Deliverable: Bloomington Web Brief</span>
-      <span class="tag">Postings snapshot: Feb 20, 2026</span>
       <span class="tag">OEWS wage year: May 2024</span>
-      <span class="tag">Unemployment window: Oct 2024–Sep 2025</span>
+      <span class="tag">Unemployment window: Jun 2024–May 2025</span>
+      <span class="tag">ACS housing estimates: 2021-2024</span>
+      <span class="tag">Postings snapshot: Feb 20, 2026</span>
     </div>
   </div>
 </header>
@@ -136,11 +135,11 @@
 <main>
   <div class="wrap grid">
 
-    <!-- TOP KPI CARDS (from your datasets + housing math) -->
+    <!-- TOP KPI CARDS -->
     <div class="card kpi">
       <h3>Unemployment (12-mo avg)</h3>
-      <div class="val">3.56%</div>
-      <div class="note">Range: 2.5%–4.4% (Oct 2024–Sep 2025). Tight labor → higher hiring friction</div>
+      <div class="val">3.67%</div>
+      <div class="note">Jun 2024–May 2025. Tight labor → higher recruiting friction</div>
     </div>
 
     <div class="card kpi">
@@ -156,9 +155,9 @@
     </div>
 
     <div class="card kpi">
-      <h3>Rent affordability threshold</h3>
+      <h3>Rent “affordability wage” threshold</h3>
       <div class="val">$22.94/hr</div>
-      <div class="note">Hourly wage needed for median rent at 30% income rule (Monroe County)</div>
+      <div class="note">Median rent, 30% income rule, single full-time earner (ACS 2020–2024)</div>
     </div>
 
     <!-- EXEC SUMMARY -->
@@ -166,29 +165,29 @@
       <h2>Executive Summary (What the market is doing to Cook)</h2>
       <div class="callout">
         <p>
-          Bloomington is a <strong>tight labor market</strong> with a <strong>manufacturing labor cluster</strong>.
-          The labor pool exists (high assembler concentration), but “available” labor is limited (unemployment ~3.6%).
-          The active postings snapshot (within 30 days) shows <strong>broad competition</strong> for production and logistics-adjacent workers,
-          which raises the importance of <strong>offer competitiveness</strong>, <strong>speed-to-hire</strong>, and <strong>retention</strong>.
+          Bloomington is a <strong>tight labor market</strong> operating inside a <strong>manufacturing labor cluster</strong>.
+          The talent base exists (high assembler concentration), but “available” labor is limited (12-month unemployment average ~3.67%).
+          A postings snapshot (Feb 20, 2026; 20 miles; within 30 days) shows broad competition for production and logistics-adjacent roles—raising the importance of
+          <strong>offer competitiveness</strong>, <strong>speed-to-hire</strong>, and <strong>retention</strong>.
         </p>
       </div>
 
       <div class="hr"></div>
       <span class="badge warn"><strong>Risk:</strong> low unemployment → time-to-fill</span>
-      <span class="badge warn"><strong>Risk:</strong> warehouse/forklift demand competes for same workforce</span>
+      <span class="badge warn"><strong>Risk:</strong> warehouse/forklift demand competes for the same workforce</span>
       <span class="badge warn"><strong>Risk:</strong> maintenance & machining are bottleneck roles</span>
       <span class="badge good"><strong>Opportunity:</strong> internal ladders (assembler → inspection/QA)</span>
 
       <ul>
-        <li><strong>Primary battleground:</strong> $18–$22/hour roles (assemblers, movers, warehouse/forklift); this is where Cook wins or loses candidates</li>
-        <li><strong>Structural advantage:</strong> high concentration of assembler/production talent locally (skills alignment)</li>
-        <li><strong>Structural constraint:</strong> tight labor conditions + high employer competition reduce “ready supply”</li>
+        <li><strong>Primary battleground:</strong> $18–$22/hour roles (assemblers, movers, warehouse/forklift); where Cook wins or loses candidates.</li>
+        <li><strong>Structural advantage:</strong> skills-aligned labor pool (high assembler and inspection concentration)</li>
+        <li><strong>Structural constraint:</strong> tight labor + high employer competition reduces “ready supply” even with a sizable workforce base</li>
       </ul>
     </div>
 
     <!-- ROLE BASKET: OEWS TABLE -->
     <div class="card full">
-      <h2>Role-Basket Benchmarks (Bloomington MSA; May 2024 OEWS)</h2>
+      <h2>Role-Basket Benchmarks (Bloomington MSA, May 2024 OEWS)</h2>
       <p class="small">
         LQ &gt; 1 indicates the occupation is more concentrated locally than the national average
       </p>
@@ -293,17 +292,18 @@
 
       <div class="hr"></div>
       <ul>
-        <li><strong>Assembler market:</strong> high local concentration (LQ 3.97) = skills-aligned labor cluster, but competition is structurally high.</li>
-        <li><strong>Forklift/warehouse competition:</strong> forklift median ~$22.29/hr places it near the “rent affordability threshold”</li>
-        <li><strong>Bottleneck risk:</strong> maintenance is a small headcount role with high wages; vacancy impact (downtime/overtime) can be disproportionate.</li>
+        <li><strong>Assembler market:</strong> high local concentration (LQ 3.97) = skills-aligned labor pool, but higher competition for the same workers</li>
+        <li><strong>Forklift/warehouse competition:</strong> forklift median ~$22.29 sits near the rent “affordability wage” threshold (single-earner, 30% rule)</li>
+        <li><strong>Bottleneck risk:</strong> maintenance has small headcount (180) + high wage floor → disproportionate operational impact when vacant</li>
       </ul>
     </div>
 
     <!-- WAGE GROWTH TRENDS -->
     <div class="card half">
-      <h2>Wage Growth Trends (May 2021 → May 2024)</h2>
+      <h2>Wage Growth Trends (Anchor comparison)</h2>
       <p class="small">
-        Purpose: quantify how fast compensation expectations are shifting locally for Cook’s relevant labor basket
+        This panel compares May 2021 vs May 2024 Bloomington metro OEWS release values for consistent anchor points.
+        We interpret these values as directional evidence of changing pay expectations (not a real-time wage index).
       </p>
       <div class="hr"></div>
       <table>
@@ -344,11 +344,11 @@
       </table>
       <div class="hr"></div>
       <ul>
-        <li><strong>Core signal:</strong> entry-level production expectations are rising materially (assembler mean +16% in 3 years)</li>
-        <li><strong>Leadership signal:</strong> supervisor wage growth is strong (+18%), increasing pay compression risk if entry wages rise without ladder adjustments.</li>
+        <li><strong>Core signal:</strong> entry-level production expectations rose materially (assembler mean +16% over 3 years)</li>
+        <li><strong>Leadership signal:</strong> supervisor wage growth (+18%) implies providing ladder consistency matters as entry wages move</li>
       </ul>
       <p class="small">
-        Note: We acknowledge OEWS methodology and SOC structures can change over time; these comparisons use BLS metro releases for consistent anchor points.
+        OEWS methodology and SOC structures can change over time; these comparisons use OEWS metro releases for consistency.
       </p>
     </div>
 
@@ -356,53 +356,68 @@
     <div class="card half">
       <h2>Housing Band Insights (Retention Friction)</h2>
       <p class="small">
-        Housing acts like a “shadow wage.” If rent rises, hourly wage expectations and churn pressure typically follow.
+        Housing acts like a “shadow wage.” If rent rises, hourly wage expectations and churn pressure typically follow (JP Morgan 2025).
+        <br/>
+        Data: U.S. Census Bureau Monroe County ACS 2020–2024 5-year estimates. “Affordability wage” converts monthly housing cost into an hourly wage benchmark.
       </p>
+      <div class="hr"></div>
+
+      <div class="mini">
+        <h3>Affordability Method (transparent)</h3>
+        <p class="small">
+          Assumptions: <strong>40 hrs/week</strong>, <strong>52 weeks/year</strong> (= 2,080 hrs), housing share rule (cost of living is 30% or 35% of gross income)
+          <br/>
+          Hourly wage = (Monthly housing cost × 12) ÷ (Rule × 2,080). Dual income divides required income across two full-time earners.
+        </p>
+      </div>
+
       <div class="hr"></div>
       <table>
         <thead>
           <tr>
-            <th>Metric (Monroe County)</th>
-            <th class="right">Value</th>
-            <th>Implication for hourly labor</th>
+            <th>Scenario</th>
+            <th class="right">Rent Wage</th>
+            <th class="right">Mortgage Wage</th>
+            <th>Interpretation</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Median gross rent (2020–2024)</td>
-            <td class="right">$1,193/mo</td>
-            <td>30% affordability rule implies ~<strong>$22.94/hr</strong> at 40 hrs/week</td>
+            <td><strong>30% Rule (single earner)</strong></td>
+            <td class="right">$22.94/hr</td>
+            <td class="right">$29.46/hr</td>
+            <td>Conservative affordability benchmark</td>
           </tr>
           <tr>
-            <td>Median owner costs (mortgage)</td>
-            <td class="right">$1,532/mo</td>
-            <td>30% affordability implies ~<strong>$29.46/hr</strong> at 40 hrs/week</td>
+            <td><strong>35% Rule (single earner)</strong></td>
+            <td class="right">$19.66/hr</td>
+            <td class="right">$25.25/hr</td>
+            <td>Less conservative; reflects higher burden tolerance</td>
           </tr>
           <tr>
-            <td>Median home value</td>
-            <td class="right">$285,200</td>
-            <td>Limits “settle + stay” for new entrants without strong wage growth</td>
-          </tr>
-          <tr>
-            <td>Median household income (2024$)</td>
-            <td class="right">$65,868</td>
-            <td>Context for local purchasing power and benefit expectations</td>
+            <td><strong>Dual income (two earners)</strong></td>
+            <td class="right">$11.47/hr each</td>
+            <td class="right">$14.73/hr each</td>
+            <td>Shows why household composition changes “affordability” reality</td>
           </tr>
         </tbody>
       </table>
+
       <div class="hr"></div>
       <ul>
-        <li><strong>Key takeaway:</strong> assembler median wage (~$17.69/hr) sits meaningfully below the rent affordability threshold (~$22.94/hr)</li>
-        <li><strong>Retention implication:</strong> if Cook hires at the low end of the $18–$22 band, total rewards (benefits, attendance bonuses, reliable hours) must close the gap.</li>
+        <li><strong>Key takeaway:</strong> assembler median (~$17.69/hr) is below both the 30% (~$22.94) and 35% (~$19.66) rent thresholds and meaningfully below the mortgage thresholds</li>
+      </ul>
+      <ul>
+        <li><strong>Retention Implication:</strong> if Cook hires at the low end of the $18–$22 band, housing can amplify churn pressure unless total rewards (benefits, attendance bonuses, reliable hours, etc.) close the gap</li>
       </ul>
     </div>
 
     <!-- ACTIVE DEMAND: JOB POSTINGS -->
     <div class="card full">
-      <h2>Active Hiring Pressure (20-mile radius)</h2>
+      <h2>Active Hiring Pressure (Postings snapshot)</h2>
       <p class="small">
-        Snapshot date: <strong>Feb 20, 2026</strong>. All postings captured were listed within the prior <strong>30 days</strong>.
-        Job postings aren't hires, but we use these as a live indicator of demand intensity and competitive recruiting activity.
+        Snapshot date: <strong>Feb 20, 2026</strong>. Radius: <strong>20 miles</strong>. Window: postings listed within <strong>30 days</strong>.
+        We acknowledge postings aren't hires, but they're a live indicator of demand intensity and competitive recruiting activity.
       </p>
 
       <div class="hr"></div>
@@ -410,7 +425,6 @@
         <thead>
           <tr>
             <th>Keyword</th>
-            <th class="right">Radius</th>
             <th class="right">Posting Count</th>
             <th>Observed Pay Range</th>
             <th>Repeated Employers (examples)</th>
@@ -419,49 +433,42 @@
         <tbody>
           <tr>
             <td><strong>production worker</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">51</td>
             <td>$20–$28</td>
             <td>Amcor, Kelly Services, Phoenix Closures, FastSigns, …</td>
           </tr>
           <tr>
             <td><strong>warehouse associate</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">47</td>
             <td>$17–$22</td>
             <td>humano, CJ Logistics, Sysco, Amazon, Walmart, …</td>
           </tr>
           <tr>
             <td><strong>forklift</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">34</td>
             <td>$18–$22</td>
             <td>Lineage Logistics, Staffmark, DHL, Costco, …</td>
           </tr>
           <tr>
             <td><strong>assembler</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">27</td>
             <td>$16–$22</td>
             <td>Express Employment Professionals, Qual…, …</td>
           </tr>
           <tr>
             <td><strong>machine operator</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">14</td>
             <td>$20–$22</td>
             <td>Printpack, Carlisle Brake &amp; Friction, Loram, …</td>
           </tr>
           <tr>
             <td><strong>quality inspector</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">11</td>
             <td>$20–$32</td>
             <td>Aerotek, Pro QC International, Dalsin Industries</td>
           </tr>
           <tr>
             <td><strong>packager</strong></td>
-            <td class="right">20 mi</td>
             <td class="right">3</td>
             <td>$17–$24</td>
             <td>Walmart, Sam’s Club</td>
@@ -482,9 +489,9 @@
         <div class="mini">
           <h3>Demand pressure flags (diagnosis)</h3>
           <ul>
-            <li><strong>Logistics demand is high</strong> (warehouse + forklift). Even if Cook is “manufacturing,” it competes for the same reliability traits and wage band.</li>
-            <li><strong>Production postings are broad</strong> (51), reinforcing that scarcity is structural in a low-unemployment market</li>
-            <li><strong>Quality inspector pay dispersion</strong> ($20–$32) suggests segmentation by experience/certs; a pathway opportunity for Cook</li>
+            <li><strong>Logistics demand is high</strong> (warehouse + forklift). Cook competes for the same reliability traits and wage band.</li>
+            <li><strong>Production postings are broad</strong> (51), reinforcing scarcity in a low-unemployment market</li>
+            <li><strong>Quality pay dispersion</strong> ($20–$32) suggests segmentation by experience/certs: an internal ladder opportunity</li>
           </ul>
         </div>
       </div>
@@ -550,21 +557,21 @@
     <div class="card full">
       <h2>Recruitment & Retention Recommendations (Bloomington)</h2>
       <ul>
-        <li><strong>Compete on speed:</strong> reduce time-to-offer for entry roles; consider same-day conditional offers and “fast-start” onboarding schedules</li>
-        <li><strong>Win the $18–$22 band:</strong> align entry pay to assembler/forklift benchmarks; if hiring below band, offset with benefits and attendance incentives</li>
-        <li><strong>Build a visible ladder:</strong> formalize internal pathways (assembler → inspector/QA → lead → supervisor) and communicate them at hiring</li>
-        <li><strong>Protect bottlenecks:</strong> treat maintenance/machining as critical-risk roles (small base, high impact). Use retention bonuses, training reimbursement, and clear progression.</li>
-        <li><strong>Address housing friction:</strong> consider shift premiums, transportation support, or retention bonuses that acknowledge the rent affordability threshold</li>
-        <li><strong>Shift follow-up:</strong> once Cook confirms 1st vs 2nd/3rd shift needs, add a “shift differential pressure” panel (market shift premiums + competitor schedules)</li>
+        <li><strong>Compete on speed:</strong> reduce time-to-offer for entry roles; consider same-day conditional offers and fast-start onboarding windows.</li>
+        <li><strong>Win the $18–$22 band:</strong> align entry pay to assembler/forklift benchmarks; if below, offset via benefits + attendance incentives + predictable hours</li>
+        <li><strong>Build a visible ladder:</strong> formalize (assembler → inspector/QA → lead → supervisor) and communicate it at hiring; reduces churn in tight markets</li>
+        <li><strong>Protect bottlenecks:</strong> maintenance/machining require proactive retention and pipelines (small base, high impact). Needs clear progression.</li>
+        <li><strong>Address housing friction honestly:</strong> consider shift premiums, transportation support, or retention bonuses that help close rent burden pressure</li>
+        <li><strong>Shift clarification request to Cook:</strong> please confirm 1st vs 2nd/3rd shift needs; add a shift-differential panel once confirmed</li>
       </ul>
     </div>
 
     <!-- POWERBI PLACEHOLDER -->
     <div class="card full">
-      <h2>PowerBI Embed (Next Deliverable)</h2>
-      <p class="small">Once the Bloomington dataset is finalized and standardized, we'll embed the site-filterable dashboard here.</p>
+      <h2>PowerBI Dashboard (Next Deliverable)</h2>
+      <p class="small">We'll embed the site-filterable dashboard here.</p>
       <div class="mini">
-        <code>&lt;iframe title="Cook Workforce" width="100%" height="520" src="POWERBI_EMBED_URL" frameborder="0" allowFullScreen="true"&gt;&lt;/iframe&gt;</code>
+        <code>&lt;iframe title="Cook Workforce.." width="100%" height="520" src="POWERBI_EMBED_URL" frameborder="0" allowFullScreen="true"&gt;&lt;/iframe&gt;</code>
       </div>
     </div>
 
@@ -575,8 +582,7 @@
   <div class="wrap src">
     <h2>Sources</h2>
     <p class="small">
-      This page integrates Bureau of Labor Statistics (BLS) unemployment data, BLS Occupational Employment and Wage Statistics (OEWS) wage data, American Community Survey (ACS) housing data by the U.S. Census Bureau, and a team-collected job postings snapshot (Feb 20, 2026).
-      Links we used below.
+      We integrated Bureau of Labor Statistics (BLS) unemployment data, Occupational Employment and Wage Statistics (OEWS) wages, American Community Survey (ACS) housing data by the U.S. Census Bureau, and a team-collected job postings snapshot (Feb 20, 2026). Each metric above includes a defined period. Links below support our verification.
     </p>
 
     <ol>
@@ -584,28 +590,35 @@
         <strong>BLS: Bloomington, IN MSA “Economy at a Glance” (unemployment series)</strong><br/>
         <a href="https://www.bls.gov/eag/eag.in_bloomington_msa.htm" target="_blank" rel="noopener">
           https://www.bls.gov/eag/eag.in_bloomington_msa.htm
-        </a>
+        </a><br/>
+        <span class="small">Used for: 12-month unemployment average (Jun 2024–May 2025)</span>
       </li>
+
       <li>
         <strong>BLS: Occupational Employment & Wages in Bloomington, IN (May 2024 OEWS)</strong><br/>
         <a href="https://www.bls.gov/regions/midwest/news-release/occupationalemploymentandwages_bloomingtonin.htm" target="_blank" rel="noopener">
           https://www.bls.gov/regions/midwest/news-release/occupationalemploymentandwages_bloomingtonin.htm
         </a>
       </li>
+
       <li>
         <strong>BLS: Occupational Employment & Wages in Bloomington, IN (May 2021 OEWS metro release)</strong><br/>
         <a href="https://www.bls.gov/regions/midwest/news-release/2022/occupationalemploymentandwages_bloomingtonin_20220901.htm" target="_blank" rel="noopener">
           https://www.bls.gov/regions/midwest/news-release/2022/occupationalemploymentandwages_bloomingtonin_20220901.htm
-        </a>
+        </a><br/>
+        <span class="small">Used for: wage growth anchor comparisons (May 2021 → May 2024)</span>
       </li>
+
       <li>
-        <strong>U.S. Census QuickFacts: Monroe County, Indiana (housing + income)</strong><br/>
+        <strong>U.S. Census QuickFacts: Monroe County, Indiana (ACS 2020–2024 5-year estimates)</strong><br/>
         <a href="https://www.census.gov/quickfacts/fact/table/monroecountyindiana/PST045224" target="_blank" rel="noopener">
           https://www.census.gov/quickfacts/fact/table/monroecountyindiana/PST045224
-        </a>
+        </a><br/>
+        <span class="small">Used for: median rent, owner costs with mortgage, home value, household income, and affordability scenarios</span>
       </li>
+
       <li>
-        <strong>Job postings snapshot (20-mile radius; posted within 30 days; captured Feb 20, 2026)</strong><br/>
+        <strong>Job postings snapshot (20-mile radius; listings within 30 days; captured Feb 20, 2026)</strong><br/>
         Example postings:
         <ul>
           <li><a href="https://www.ziprecruiter.com/c/Retail-Odyssey/Job/Product-Assembler/-in-Bloomington,IN?jid=2fdca206f4513727&trk=bingjobs&exp_similar_jobs_carousel_seo_bucket_test=Control" target="_blank" rel="noopener">
@@ -615,13 +628,21 @@
             Glassdoor: Production Associate (Bloomington)
           </a></li>
         </ul>
-        <span class="small">Posting counts and pay ranges may change daily; this page reflects the recorded snapshot.</span>
+        <span class="small">We acknowledge job posting counts and pay ranges may change daily; this page reflects the recorded snapshot.</span>
+      </li>
+      
+      <li>
+        <strong>JP Morgan Chase: Community Development (2025 inflation impact on renters)</strong><br/>
+        <a href="https://www.jpmorganchase.com/institute/all-topics/community-development/inflation-impact-on-renters" target="_blank" rel="noopener">
+          https://www.jpmorganchase.com/institute/all-topics/community-development/inflation-impact-on-renters
+        </a><br/>
+        <span class="small">Used for: housing insights, hourly wage expectations and churn pressure</span>
       </li>
     </ol>
 
     <div class="hr"></div>
     <p class="small">
-      Version 0.1. Next: (1) PowerBI dashboard with site filtering and KPI cards, and (2) a reproducible “Do-File” that logs each data pull, transformation, and snapshot date.
+      Version 0.1. Next: finalize standardized Fact tables + build the PowerBI dashboard pages (Executive Overview → Wages → Hiring Pressure → Housing → Methodology).
     </p>
   </div>
 </footer>
